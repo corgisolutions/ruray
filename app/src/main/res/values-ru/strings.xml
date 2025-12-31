@@ -1,0 +1,121 @@
+<resources>
+    <string name="settings">настройки</string>
+    <string name="background_scan">фоновое сканирование</string>
+    <string name="passive_health_checks">тихая проверка списка</string>
+    <string name="vpn_mode">режим vpn</string>
+    <string name="tunnel_all_device_traffic">прогон всего трафика устройства</string>
+    <string name="split_tunneling">раздельный туннель</string>
+    <string name="split_tunnel_unavailable">недоступно без vpn</string>
+    <string name="split_tunnel_bypass">обход выбранных приложений</string>
+    <string name="split_tunnel_only_selected">только выбранные в туннеле</string>
+    <string name="split_tunnel_all_apps">все приложения в туннеле</string>
+    <string name="mode_bypass">обход</string>
+    <string name="mode_all">все</string>
+    <string name="mode_isolate">изоляция</string>
+    <string name="manage_apps_count">выбрать приложения (%1$d выбрано)</string>
+    <string name="block_local_network">блокировать локальную сеть</string>
+    <string name="lan_traffic_blocked">локальный трафик заблокирован (killswitch)</string>
+    <string name="lan_traffic_allowed">локальный трафик разрешён</string>
+    <string name="socks5_proxy">socks5 прокси</string>
+    <string name="socks_lan_share">0.0.0.0:%1$s (доступно по локалке)</string>
+    <string name="socks_local">127.0.0.1:%1$s</string>
+    <string name="allow_lan_connections">разрешить подключения по локалке</string>
+    <string name="port">порт</string>
+    <string name="port_allowed_range">допустимо: 1024-65535</string>
+    <string name="reset">сброс</string>
+    <string name="connect">подключиться</string>
+    <string name="stop">отключиться</string>
+    <string name="servers">%d серверов</string>
+    <string name="apply_restart_core">применить и перезапустить ядро</string>
+
+    <string name="status_idle">ожидание</string>
+    <string name="status_connected">подключено</string>
+    <string name="status_connecting">подключение...</string>
+    <string name="status_scanning">сканирование...</string>
+    <string name="status_restarting_core">перезапуск ядра...</string>
+    <string name="status_stopped">остановлено</string>
+    <string name="status_no_hosts">нет хостов</string>
+    <string name="status_no_working_hosts">нет рабочих хостов</string>
+    <string name="status_quick">быстро...</string>
+    <string name="status_quick_checking">быстрая проверка %s...</string>
+    <string name="status_quick_connect_failed">быстрое подключение не удалось</string>
+    <string name="status_no_history">нет истории</string>
+    <string name="status_connection_failed">подключение не удалось</string>
+    <string name="status_fetching">загрузка...</string>
+    <string name="status_added_hosts">добавлено %d хостов</string>
+    <string name="status_no_new_hosts">нет новых хостов</string>
+    <string name="status_testing">тестирование %s...</string>
+
+    <string name="timeout">таймаут</string>
+    <string name="na">н/д</string>
+    <string name="active">АКТИВЕН</string>
+    <string name="ms">мс</string>
+
+    <string name="manage_apps">выбрать приложения</string>
+    <string name="close">закрыть</string>
+    <string name="search_apps">поиск приложений...</string>
+
+    <string name="notif_scanning">сканирование серверов...</string>
+    <string name="notif_connected">подключено: %s</string>
+    <string name="notif_proxy_only">прокси: %s</string>
+    <string name="notif_switching">переключение на %s...</string>
+    <string name="notif_reconnecting">переподключение...</string>
+    <string name="notif_connection_lost">соединение потеряно</string>
+
+    <string name="advanced_network">расширенные настройки</string>
+    <string name="advanced_network_desc">mtu, dns, адреса</string>
+    <string name="mtu_auto">авто</string>
+    <string name="dns">dns</string>
+    <string name="dns_system_note">системный dns при доступе к lan</string>
+    <string name="custom">свой</string>
+    <string name="addresses">адреса</string>
+    <string name="addresses_random">случайные при подключении</string>
+
+    <string name="gov_apps_whitelisted_title">приложения обходят vpn</string>
+    <string name="gov_apps_whitelisted_single">%1$s теперь обходит vpn</string>
+    <string name="gov_apps_whitelisted_multiple">%1$d приложений теперь обходят vpn</string>
+    <string name="gov_apps_whitelisted_detail">эти приложения обходят vpn для безопасности: %1$s. некоторые могут быть заблокированы провайдером. вы можете изменить это в настройках раздельного туннелирования.</string>
+    <string name="gov_channel_name">уведомления безопасности</string>
+    <string name="gov_channel_desc">уведомления об автоматически обходящих vpn приложениях</string>
+    <string name="gov_warning_title">приложения обходят vpn</string>
+    <string name="gov_warning_body">эти приложения обходят vpn для вашей безопасности. маршрутизация государственных или банковских приложений через vpn может пометить ваш аккаунт. вы можете изменить это в настройках раздельного туннелирования.</string>
+    <string name="gov_warning_manage">управление</string>
+
+    <string name="system_gov_title">критическое предупреждение</string>
+    <string name="system_gov_warning_main">на вашем телефоне установлены предустановленные государственные приложения, которые могут обнаружить использование vpn и сообщить об этом.</string>
+    <string name="system_gov_explanation_title">почему это важно</string>
+    <string name="system_gov_explanation_body">эти приложения были установлены вашим оператором или производителем на системном уровне. у них повышенные привилегии, и они могут:\n\n• обнаруживать активный vpn\n• видеть установленные приложения\n• потенциально передавать эту информацию\n\nиспользование vpn для обхода блокировок может считаться незаконным. государство может и будет использовать эти данные против вас.</string>
+    <string name="system_gov_found_apps">найдено предустановленных приложений: %d</string>
+    <string name="system_gov_disable">отключить</string>
+    <string name="system_gov_how_to_disable_title">как отключить</string>
+    <string name="system_gov_how_to_disable_body">нажмите на любое приложение выше, чтобы открыть его настройки. затем нажмите «отключить» или «остановить». приложение перестанет работать, но останется на устройстве. это единственный способ остановить его без root-доступа.</string>
+    <string name="system_gov_confirm_checkbox">я понимаю риски и хочу продолжить</string>
+    <string name="system_gov_dismiss_button">я принимаю риск</string>
+
+    <string name="gov_dialog_title">предупреждение</string>
+    <string name="gov_dialog_warning">на устройстве обнаружены государственные приложения. они могут обнаружить использование vpn, даже если их трафик обходит туннель.</string>
+    <string name="gov_dialog_what_they_see">что они видят</string>
+    <string name="gov_dialog_detection_list">• vpn сейчас активен\n• какое vpn-приложение используется\n• как долго работает vpn\n\nобход скрывает только ваш трафик, но не статус vpn.</string>
+    <string name="gov_dialog_found_apps">обнаружено приложений: %d</string>
+    <string name="gov_dialog_options_title">ваши варианты</string>
+    <string name="gov_dialog_options_body">• полностью удалить приложение\n• отключить в настройках (не будет работать)\n• использовать только при выключенном vpn\n\nмы автоматически обошли эти приложения, но они всё равно видят, что vpn включен.</string>
+    <string name="gov_dialog_dismiss">понятно</string>
+    <string name="gov_dialog_manage">управление</string>
+
+    <string name="tile_connected">Подключено</string>
+    <string name="tile_disconnected">Отключено</string>
+    <string name="tile_connecting">Подключение...</string>
+    <string name="tile_tap_to_connect">Нажмите для подключения</string>
+
+    <string name="update_available">доступно обновление</string>
+    <string name="update_notification_title">доступно обновление</string>
+    <string name="update_notification_text">v%1$s готов к загрузке</string>
+    <string name="update_download_size">размер: %1$s</string>
+    <string name="update_proxied_note">загрузка через vpn</string>
+    <string name="update_later">позже</string>
+    <string name="update_button">обновить</string>
+    <string name="update_downloading">загрузка...</string>
+    <string name="update_download_failed">ошибка загрузки</string>
+    <string name="update_channel_name">обновления</string>
+    <string name="update_channel_desc">уведомления об обновлениях приложения</string>
+</resources>

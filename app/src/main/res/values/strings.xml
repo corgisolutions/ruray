@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name" translatable="false">RURay</string>
+    <string name="notif_title" translatable="false">RURay</string>
+
+    <string name="settings">settings</string>
+    <string name="background_scan">background scan</string>
+    <string name="passive_health_checks">passive health checks</string>
+    <string name="vpn_mode">vpn mode</string>
+    <string name="tunnel_all_device_traffic">tunnel all device traffic</string>
+    <string name="split_tunneling">split tunneling</string>
+    <string name="split_tunnel_unavailable">unavailable without VPN</string>
+    <string name="split_tunnel_bypass">bypass selected apps</string>
+    <string name="split_tunnel_only_selected">only tunnel selected apps</string>
+    <string name="split_tunnel_all_apps">tunnel all apps</string>
+    <string name="mode_bypass">bypass</string>
+    <string name="mode_all">all</string>
+    <string name="mode_isolate">isolate</string>
+    <string name="manage_apps_count">manage apps (%1$d selected)</string>
+    <string name="block_local_network">block local network</string>
+    <string name="lan_traffic_blocked">lan traffic blocked (killswitch)</string>
+    <string name="lan_traffic_allowed">lan traffic allowed</string>
+    <string name="socks5_proxy">socks5 proxy</string>
+    <string name="socks_lan_share">0.0.0.0:%1$s (lan share)</string>
+    <string name="socks_local">127.0.0.1:%1$s</string>
+    <string name="allow_lan_connections">allow lan connections</string>
+    <string name="port">port</string>
+    <string name="port_allowed_range">allowed: 1024-65535</string>
+    <string name="reset">reset</string>
+    <string name="connect">connect</string>
+    <string name="stop">stop</string>
+    <string name="servers">%d servers</string>
+    <string name="apply_restart_core">apply &amp; restart core</string>
+
+    <string name="status_idle">idle</string>
+    <string name="status_connected">connected</string>
+    <string name="status_connecting">connecting...</string>
+    <string name="status_scanning">scanning...</string>
+    <string name="status_restarting_core">restarting core...</string>
+    <string name="status_stopped">stopped</string>
+    <string name="status_no_hosts">no hosts</string>
+    <string name="status_no_working_hosts">no working hosts</string>
+    <string name="status_quick">quick...</string>
+    <string name="status_quick_checking">quick checking %s...</string>
+    <string name="status_quick_connect_failed">quick connect failed</string>
+    <string name="status_no_history">no history</string>
+    <string name="status_connection_failed">connection failed</string>
+    <string name="status_fetching">fetching...</string>
+    <string name="status_added_hosts">added %d hosts</string>
+    <string name="status_no_new_hosts">no new hosts</string>
+    <string name="status_testing">testing %s...</string>
+
+    <string name="timeout">timeout</string>
+    <string name="na">n/a</string>
+    <string name="active">ACTIVE</string>
+    <string name="ms">ms</string>
+
+    <string name="manage_apps">manage apps</string>
+    <string name="close">close</string>
+    <string name="search_apps">search apps...</string>
+
+    <string name="notif_scanning">scanning servers...</string>
+    <string name="notif_connected">connected: %s</string>
+    <string name="notif_proxy_only">proxy: %s</string>
+    <string name="notif_switching">switching to %s...</string>
+    <string name="notif_reconnecting">reconnecting...</string>
+    <string name="notif_connection_lost">connection lost</string>
+
+    <string name="advanced_network">advanced network</string>
+    <string name="advanced_network_desc">mtu, dns, addresses</string>
+    <string name="mtu_auto">auto</string>
+    <string name="dns">dns</string>
+    <string name="dns_system_note">system dns when lan allowed</string>
+    <string name="custom">custom</string>
+    <string name="addresses">addresses</string>
+    <string name="addresses_random">random each connection</string>
+
+    <string name="gov_apps_whitelisted_title">apps auto-bypassed</string>
+    <string name="gov_apps_whitelisted_single">%1$s now bypasses vpn</string>
+    <string name="gov_apps_whitelisted_multiple">%1$d apps now bypass vpn</string>
+    <string name="gov_apps_whitelisted_detail">these apps bypass vpn for safety: %1$s. some may be blocked by your isp. you can change this in split tunneling settings.</string>
+    <string name="gov_channel_name">security alerts</string>
+    <string name="gov_channel_desc">notifications about auto-bypassed apps</string>
+    <string name="gov_warning_title">apps auto-bypassed</string>
+    <string name="gov_warning_body">these apps bypass vpn to protect your identity. routing government or banking apps through vpn may flag your account. you can change this in split tunneling settings.</string>
+    <string name="gov_warning_manage">manage</string>
+
+    <string name="system_gov_title">critical warning</string>
+    <string name="system_gov_warning_main">your phone has preinstalled government-affiliated apps that can detect vpn usage and report it.</string>
+    <string name="system_gov_explanation_title">why this matters</string>
+    <string name="system_gov_explanation_body">these apps were installed by your carrier or manufacturer at the system level. they have elevated privileges and can:\n\n• detect when vpn is active\n• see which apps you have installed\n• potentially report this information\n\nusing a vpn to bypass censorship may be considered illegal. the government can and will use this data against you.</string>
+    <string name="system_gov_found_apps">%d preinstalled surveillance app(s) found:</string>
+    <string name="system_gov_disable">disable</string>
+    <string name="system_gov_how_to_disable_title">how to disable</string>
+    <string name="system_gov_how_to_disable_body">tap on any app above to open its settings. then tap \"disable\" or \"force stop\". the app will stop running but remain on your device. this is the only way to stop it without root access.</string>
+    <string name="system_gov_confirm_checkbox">i understand the risks and want to continue anyway</string>
+    <string name="system_gov_dismiss_button">i accept the risk</string>
+
+    <string name="gov_dialog_title">warning</string>
+    <string name="gov_dialog_warning">government-affiliated apps detected on your device. these apps can detect vpn usage even if their traffic is bypassed.</string>
+    <string name="gov_dialog_what_they_see">what they can detect</string>
+    <string name="gov_dialog_detection_list">• vpn is currently active\n• which vpn app you\'re using\n• how long vpn has been running\n\nbypass only hides your traffic from them, not your vpn status.</string>
+    <string name="gov_dialog_found_apps">%d app(s) detected:</string>
+    <string name="gov_dialog_options_title">your options</string>
+    <string name="gov_dialog_options_body">• uninstall the app completely\n• disable it in settings (won\'t run)\n• use the app only when vpn is off\n\nwe\'ve auto-bypassed these apps so they won\'t see your traffic, but they can still see vpn is on.</string>
+    <string name="gov_dialog_dismiss">i understand</string>
+    <string name="gov_dialog_manage">manage apps</string>
+
+    <string name="tile_connected">Connected</string>
+    <string name="tile_disconnected">Disconnected</string>
+    <string name="tile_connecting">Connecting...</string>
+    <string name="tile_tap_to_connect">Tap to connect</string>
+
+    <string name="update_available">update available</string>
+    <string name="update_notification_title">update available</string>
+    <string name="update_notification_text">v%1$s is ready to download</string>
+    <string name="update_download_size">download size: %1$s</string>
+    <string name="update_proxied_note">download will be proxied through vpn</string>
+    <string name="update_later">later</string>
+    <string name="update_button">update</string>
+    <string name="update_downloading">downloading...</string>
+    <string name="update_download_failed">download failed</string>
+    <string name="update_channel_name">app updates</string>
+    <string name="update_channel_desc">notifications for app updates</string>
+</resources>
