@@ -1,7 +1,7 @@
 # RURay
 
 <div align="center">
-  <img src="app/src/main/res/drawable/logo.gif" width="120" height="120" alt="RURay"/>
+  <img src="ruray.jpeg" width="120" height="120" alt="RURay"/>
   
   **обход белых списков для России**
   
@@ -118,4 +118,5 @@ MIT. Do whatever you want.
 
 <div align="center">
   <sub>@corgisolutions</sub>
+
 </div>
