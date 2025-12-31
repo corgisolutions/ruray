@@ -16,7 +16,7 @@
 
 Сотовую связь глушат «ради нашей безопасности от дронов». Радиоволнам, конечно, всё равно — сидите вы в MAX или в Instagram. Это тестирование белых списков.
 
-Постановление Правительства РФ №1667 от 12.10.2024 вступает в силу **01.03.2026**. Оно даёт Роскомнадзору полные права на изоляцию российского сегмента интернета. Провайдеры будут обязаны пропускать трафик только к «одобренным» ресурсам.
+Постановление Правительства РФ №1667 от 27.10.2025 вступает в силу **01.03.2026**. Оно даёт Роскомнадзору полные права на изоляцию российского сегмента интернета. Провайдеры будут обязаны пропускать трафик только к «одобренным» ресурсам.
 
 Мы к этому готовимся.
 
@@ -69,7 +69,7 @@ MIT. Делайте что хотите.
 
 Cellular networks in Russia are being "jammed" supposedly "for safety against drones". Radio waves don't care if you're on a government app or Instagram. This is whitelist testing.
 
-Government decree №1667 (12.10.2024) comes into effect **01.03.2026**. It gives Roskomnadzor full authority to isolate the Russian internet segment. ISPs will be required to allow traffic only to "approved" resources.
+Government decree №1667 (27.10.2025) comes into effect **01.03.2026**. It gives Roskomnadzor full authority to isolate the Russian internet segment. ISPs will be required to allow traffic only to "approved" resources.
 
 We're preparing for this.
 
@@ -120,3 +120,4 @@ MIT. Do whatever you want.
   <sub>@corgisolutions</sub>
 
 </div>
+
