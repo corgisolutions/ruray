@@ -20,6 +20,18 @@
 
 Мы к этому готовимся.
 
+### ⚠️ Важно
+
+**Синхронизируйте серверы заранее. Потяните экран вниз чтобы загрузить список серверов.**
+
+Если белые списки введут полностью и GitHub перестанет работать — а все серверы в вашем списке уже мертвы — подключиться будет невозможно. Навсегда.
+
+Варианты:
+- Открывайте приложение хотя бы раз в неделю и обновляйте список
+- Включите фоновое сканирование в настройках — приложение будет проверять серверы автоматически
+
+**Про синхронизацию:** при загрузке списка серверов используется ваш текущий (возможно реальный) IP-адрес. Если это важно — делайте первую синхронизацию через другой рабочий VPN. Это рекомендация, не требование.
+
 ### Как это работает
 
 RURay подключается к серверам через **XTLS-Reality + VLESS**. Эта технология маскирует VPN-трафик под обычный HTTPS — для ТСПУ он выглядит как обращение к обычному сайту.
@@ -73,6 +85,18 @@ Government decree №1667 (27.10.2025) comes into effect **01.03.2026**. It give
 
 We're preparing for this.
 
+### ⚠️ Important
+
+**Sync servers in advance. Pull down on the screen to fetch the server list.**
+
+If whitelisting is fully implemented and GitHub stops working — and all servers in your list are already dead — you won't be able to connect. Ever.
+
+Options:
+- Open the app at least once a week and refresh the list
+- Enable background scanning in settings — the app will check servers automatically
+
+**About syncing:** fetching the server list uses your current (probably real) IP address. If this matters to you — do the first sync through another working VPN. This is a recommendation, not a requirement.
+
 ### How it works
 
 RURay connects to servers via **XTLS-Reality + VLESS**. This technology disguises VPN traffic as regular HTTPS — to deep packet inspection it looks like a normal website visit.
@@ -116,8 +140,7 @@ MIT. Do whatever you want.
 
 ---
 
-<div align="center">
+<p align="center">
+  <img src="app/src/main/res/drawable/logo.gif" width="32" height="32" alt="" align="middle"/>
   <sub>@corgisolutions</sub>
-
-</div>
-
+</p>
