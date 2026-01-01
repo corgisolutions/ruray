@@ -58,6 +58,21 @@ RURay подключается к серверам через **XTLS-Reality + V
 
 Если на телефоне есть **предустановленные** системные госприложения (например, MAX на некоторых устройствах) — мы покажем предупреждение. Они имеют повышенные привилегии и потенциально опасны.
 
+### ⚠️ Распространение
+
+**Использование VPN в России (пока что) легально.** Закон разрешает VPN для защиты данных, удалённой работы и доступа к незаблокированным ресурсам.
+
+**Реклама и распространение VPN для обхода блокировок — нет.**
+
+С 1 сентября 2025 года действует закон №281-ФЗ. Штрафы за рекламу средств обхода блокировок:
+
+| | Граждане | Должностные лица | Юрлица |
+|---|---|---|---|
+| Первое нарушение | 50–80 тыс. ₽ | 80–150 тыс. ₽ | 200–500 тыс. ₽ |
+| Повторное | 100–200 тыс. ₽ | 200–300 тыс. ₽ | до 1 млн ₽ |
+
+Распространяя это приложение, вы принимаете на себя эти риски. Мы не призываем нарушать закон.
+
 ### Установка
 
 1. Скачайте APK из [Releases](https://github.com/corgisolutions/ruray/releases/latest)
@@ -122,6 +137,21 @@ Apps like government services, VK, banks — can detect that VPN is active. Usin
 The app automatically adds detected government apps to VPN bypass. Their traffic goes directly, they don't see your VPN activity. But they can still see that VPN is active.
 
 If there are **pre-installed** system government apps on your phone — we'll show a warning. They have elevated privileges and are potentially dangerous.
+
+### ⚠️ Distribution
+
+**Using a VPN in Russia is legal (for now).** The law permits VPN for data protection, remote work, and accessing non-blocked resources.
+
+**Advertising and distributing VPN for bypassing blocks is not.**
+
+Since September 1, 2025, law №281-FZ is in effect. Fines for advertising bypass tools:
+
+| | Individuals | Officials | Legal entities |
+|---|---|---|---|
+| First offense | 50–80k ₽ (~$550–900) | 80–150k ₽ (~$900–1,700) | 200–500k ₽ (~$2,200–5,500) |
+| Repeat | 100–200k ₽ (~$1,100–2,200) | 200–300k ₽ (~$2,200–3,300) | up to 1M ₽ (~$11,000) |
+
+By distributing this app, you accept these risks. We do not encourage breaking the law.
 
 ### Installation
 
