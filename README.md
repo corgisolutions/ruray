@@ -170,6 +170,20 @@ MIT. Do whatever you want.
 
 ---
 
+## Third-party components
+
+- **MaxMind GeoIP2** — https://github.com/maxmind/GeoIP2-java
+
+- **XTLS/Xray-core** — https://github.com/XTLS/Xray-core
+
+- **heiher/hev-socks5-tunnel** — https://github.com/heiher/hev-socks5-tunnel
+
+- **Libv2ray** — https://github.com/2dust/AndroidLibXrayLite
+
+Thank you to these projects and their contributors for their excellent work!
+
+---
+
 <p align="center">
   <img src="app/src/main/res/drawable/logo.gif" width="32" height="32" alt="" align="middle"/>
   <sub>@corgisolutions</sub>
