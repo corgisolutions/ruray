@@ -9,10 +9,10 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface VlessDao {
-    @Query("SELECT * FROM vless_hosts ORDER BY CASE WHEN latency > 0 THEN 0 ELSE 1 END, latency ASC")
+    @Query("SELECT * FROM vless_hosts ORDER BY CASE WHEN failureCount > 0 THEN 1 ELSE 0 END, CASE WHEN latency > 0 THEN 0 ELSE 1 END, latency ASC")
     fun getAllHosts(): Flow<List<VlessHost>>
     
-    @Query("SELECT * FROM vless_hosts ORDER BY CASE WHEN latency > 0 THEN 0 ELSE 1 END, latency ASC")
+    @Query("SELECT * FROM vless_hosts ORDER BY CASE WHEN failureCount > 0 THEN 1 ELSE 0 END, CASE WHEN latency > 0 THEN 0 ELSE 1 END, latency ASC")
     suspend fun getAllHostsList(): List<VlessHost>
 
     @Query("SELECT * FROM vless_hosts WHERE isWorking = 1 AND link != :excludeLink ORDER BY latency ASC LIMIT 1")
