@@ -287,14 +287,15 @@ fun MainScreen(launchId: Long, modifier: Modifier = Modifier) {
 
     val sortedHosts = remember(allHosts, activeLink, lastActiveLink) {
          allHosts
-            .distinctBy {
-                parseVlessLink(it.link)?.let { d -> "${d.address}:${d.port}" } ?: it.link
-            }
             .sortedWith(compareByDescending<VlessHost> {
                 areLinksEquivalent(it.link, activeLink) || areLinksEquivalent(it.link, lastActiveLink)
             }
+            .thenBy { it.failureCount > 0 }
             .thenByDescending { it.latency > 0 }
             .thenBy { it.latency })
+            .distinctBy {
+                parseVlessLink(it.link)?.let { d -> "${d.address}:${d.port}" } ?: it.link
+            }
     }
 
     val listState = rememberLazyListState()
@@ -1296,8 +1297,3 @@ fun Context.findActivity(): Activity? {
     }
     return null
 }
-
-// unused but not sure what it's doing here
-/*fun Modifier.scale(scale: Float): Modifier = this.then(
-    Modifier.graphicsLayer(scaleX = scale, scaleY = scale)
-)*/
