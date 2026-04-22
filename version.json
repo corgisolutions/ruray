@@ -1,8 +1,8 @@
 {
-  "versionCode": 1,
-  "versionName": "1.0.0",
-  "downloadUrl": "https://github.com/corgisolutions/ruray/releases/download/release/ruray-v1.0.0.apk",
-  "size": 38445056,
-  "changelog_en": "Initial release",
-  "changelog_ru": "Первый релиз"
+  "versionCode": 2,
+  "versionName": "1.0.1",
+  "downloadUrl": "https://github.com/corgisolutions/ruray/releases/download/1.0.1/RuRay_101220426.apk",
+  "size": 65763828,
+  "changelog_en": "- Fixed connection loops.\n- Fixed missing active server in UI.\n- Bumped Xray-core and added 32-bit device support.",
+  "changelog_ru": "- Исправлены циклы переподключения.\n- Исправлено исчезновение активного сервера из списка.\n- Обновлен Xray-core и добавлена поддержка 32-битных устройств."
 }
