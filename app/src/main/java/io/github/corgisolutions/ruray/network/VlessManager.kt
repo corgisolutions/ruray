@@ -170,7 +170,7 @@ class VlessManager(private val context: Context) {
             val out = socket.getOutputStream()
             val ins = socket.getInputStream()
 
-            out.write(byteArrayOf(0x05, 0x01, 0x00)) // handshake
+            out.write(byteArrayOf(0x05, 0x01, 0x00)) 
             out.flush()
             val buffer = ByteArray(2)
             var totalRead = 0
@@ -179,29 +179,63 @@ class VlessManager(private val context: Context) {
                 if (r == -1) return@withContext false
                 totalRead += r
             }
-            if (buffer[0] != 0x05.toByte()) return@withContext false
+            if (buffer[0] != 0x05.toByte() || buffer[1] != 0x00.toByte()) return@withContext false
 
-            val ipBytes = byteArrayOf(1, 1, 1, 1)
-            val portBytes = ByteBuffer.allocate(2).putShort(80).array()
-            val request = byteArrayOf(0x05, 0x01, 0x00, 0x01) + ipBytes + portBytes
-            out.write(request)
+            val domain = "cp.cloudflare.com"
+            val domainBytes = domain.toByteArray()
+            val request = ByteBuffer.allocate(4 + 1 + domainBytes.size + 2)
+            request.put(byteArrayOf(0x05, 0x01, 0x00, 0x03))
+            request.put(domainBytes.size.toByte())
+            request.put(domainBytes)
+            request.putShort(80)
+            out.write(request.array())
             out.flush()
 
-            val respBuffer = ByteArray(10)
+            val respHeader = ByteArray(4)
             totalRead = 0
-            while (totalRead < 10) {
-                val r = ins.read(respBuffer, totalRead, 10 - totalRead)
-                if (r == -1) break
+            while (totalRead < 4) {
+                val r = ins.read(respHeader, totalRead, 4 - totalRead)
+                if (r == -1) return@withContext false
                 totalRead += r
             }
-            if (totalRead <= 2 || respBuffer[1] != 0x00.toByte()) return@withContext false
+            if (respHeader[0] != 0x05.toByte() || respHeader[1] != 0x00.toByte()) return@withContext false
 
-            val httpReq = "HEAD / HTTP/1.0\r\nHost: 1.1.1.1\r\n\r\n".toByteArray()
+            val atyp = respHeader[3].toInt() and 0xFF
+            val skipBytes = when (atyp) {
+                0x01 -> 4 + 2
+                0x03 -> {
+                    val len = ins.read()
+                    if (len == -1) return@withContext false
+                    len + 2
+                }
+                0x04 -> 16 + 2
+                else -> return@withContext false
+            }
+
+            val skipBuf = ByteArray(skipBytes)
+            totalRead = 0
+            while (totalRead < skipBytes) {
+                val r = ins.read(skipBuf, totalRead, skipBytes - totalRead)
+                if (r == -1) return@withContext false
+                totalRead += r
+            }
+
+            val httpReq = "GET /generate_204 HTTP/1.1\r\nHost: $domain\r\nUser-Agent: Mozilla/5.0\r\nConnection: close\r\n\r\n".toByteArray()
             out.write(httpReq)
             out.flush()
 
-            val oneByte = ins.read()
-            return@withContext oneByte != -1
+            val reader = BufferedReader(InputStreamReader(ins))
+            val statusLine = reader.readLine()
+            if (statusLine != null && statusLine.startsWith("HTTP/")) {
+                val parts = statusLine.split(" ")
+                if (parts.size >= 2) {
+                    val code = parts[1].toIntOrNull()
+                    if (code == 204) {
+                        return@withContext true
+                    }
+                }
+            }
+            return@withContext false
 
         } catch (e: Exception) {
             Log.w(TAG, "alive check: ${e.message}")
